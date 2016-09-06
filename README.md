@@ -1,1 +1,1 @@
-# clientinfo
+# Javascript client information
