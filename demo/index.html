@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Client info JS</title>
+  </head>
+  <body>
+    <script src="../dist/clientinfo.min.js"></script>
+    <script>
+      var clientinfo = new ClientInfo();
+
+      console.log(clientinfo);
+      console.log(clientinfo.getJSVersion());
+      console.log(clientinfo.detectFont('Arial'));
+      console.log(clientinfo.getFonts());
+      console.log(clientinfo.getFontsString());
+      console.log(clientinfo.getReferrer());
+      console.log(clientinfo.getColorDepth());
+      console.log(clientinfo.getColorType());
+      console.log(clientinfo.getScreenSize());
+      console.log(clientinfo.getScreenRatio());
+      console.log(clientinfo.getScreenPrint());
+      console.log(clientinfo.getWorkingAreaSize());
+      console.log(clientinfo.getNavigatorInfo());
+      console.log(clientinfo.getLanguage());
+      console.log(clientinfo.getLanguages());
+      console.log(clientinfo.getLanguagesString());
+
+      console.log(clientinfo.getMemoryPerformance());
+      console.log(clientinfo.getNavigationPerformance());
+
+      console.log(clientinfo.detectWebGl());
+
+      clientinfo.getBatteryInfo()
+        .then(function(result) {
+          console.log(result);
+        });
+
+      clientinfo.geTimingPerformance()
+        .then(function(result) {
+          console.log(result);
+        });
+
+      clientinfo.getNavigatorPermissions()
+        .then(function(result) {
+          console.log(result);
+        });
+
+      clientinfo.getGlobalPermissions()
+        .then(function(result) {
+          console.log(result);
+        });
+    </script>
+  </body>
+</html>
